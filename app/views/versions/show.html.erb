@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @version.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @version.code %>
+</p>
+
+<p>
+  <strong>Download:</strong>
+  <%= @version.download %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @version.description %>
+</p>
+
+<p>
+  <strong>Force:</strong>
+  <%= @version.force %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @version.status %>
+</p>
+
+<!--<%= link_to 'Edit', edit_user_app_version_path(@user, @app, @version) %> |-->
+<%= link_to 'Back', user_app_path(@user, @app) %>

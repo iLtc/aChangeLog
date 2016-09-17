@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @app.title %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Download</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Force</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @versions.each do |version| %>
+      <tr>
+        <td><%= version.name %></td>
+        <td><%= version.code %></td>
+        <td><%= version.download %></td>
+        <td><%= version.description %></td>
+        <td><%= version.status %></td>
+        <td><%= version.force %></td>
+        <td><%= link_to 'Show', user_app_version_path(@user, @app, version) %></td>
+        <td><!--<%= link_to 'Edit', edit_user_app_version_path(@user, @app, version) %>--></td>
+        <td><!--<%= link_to 'Destroy', user_app_version_path(@user, @app, version), method: :delete, data: { confirm: 'Are you sure?' } %>--></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Version', new_user_app_version_path(@user, @app) %> | 
+
+<!--<%= link_to 'Edit', edit_user_app_path(@user, @app) %> |-->
+<%= link_to 'Back', user_path(@user) %>
