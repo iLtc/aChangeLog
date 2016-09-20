@@ -58,7 +58,7 @@ class VersionsController < ApplicationController
   def destroy
     @version.destroy
     respond_to do |format|
-      format.html { redirect_to versions_url, notice: 'Version was successfully destroyed.' }
+      format.html { redirect_to user_app_path(@user, @app), notice: 'Version was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

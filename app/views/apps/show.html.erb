@@ -29,7 +29,7 @@
         <td><%= version.force %></td>
         <td><%= link_to 'Show', user_app_version_path(@user, @app, version) %></td>
         <td><!--<%= link_to 'Edit', edit_user_app_version_path(@user, @app, version) %>--></td>
-        <td><!--<%= link_to 'Destroy', user_app_version_path(@user, @app, version), method: :delete, data: { confirm: 'Are you sure?' } %>--></td>
+        <td><%= link_to 'Destroy', user_app_version_path(@user, @app, version), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
